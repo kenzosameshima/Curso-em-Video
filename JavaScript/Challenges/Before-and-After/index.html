@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Challenge</title>
+    <style>
+        body {
+            font: 12pt Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        button {
+            font-size: 12pt;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Before and After</h1>
+    <button id="button">Predecessor and Successor</button>
+
+    <script>
+        document.querySelector('#button').addEventListener('click', predecessorAndSuccessor);
+
+        function predecessorAndSuccessor() {
+            let number = window.prompt('Type a random number');
+            const parsedNumber = parseInt(number);
+            let predecessor = parsedNumber - 1;
+            let successor = parsedNumber + 1;
+            window.alert(`The predecessor of ${number} is ${predecessor} and its successor is ${successor}`);
+        }
+    </script>
+</body>
+</html>
