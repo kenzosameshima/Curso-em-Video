@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Calculator</title>
+    <style>
+        body {
+            font: 12pt Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        button {
+            font-size: 12pt;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calculating Change</h1>
+    <button id="buy">Buy a new product</button>
+
+    <script>
+        document.querySelector('#buy').addEventListener('click', calculateChange);
+
+        function calculateChange() {
+           let product = window.prompt('What are you buying?');
+           let price = parseFloat(window.prompt(`How much does the ${product} cost?`));
+           let payment = parseFloat(window.prompt(`How much are you paying for the ${product}?`));
+           if (payment < price) {
+               window.alert('You don\'t have enough money to buy this product');
+           } else if (payment == price) {
+            window.alert(`You bought a ${product} for $${price.toFixed(2)} and there is no change`)
+           } else {
+               let change = payment - price;
+               window.alert(`You bought a ${product} for $${price.toFixed(2)} and your change is $${change.toFixed(2)}`);
+           }
+        }
+    </script>
+</body>
+</html>
