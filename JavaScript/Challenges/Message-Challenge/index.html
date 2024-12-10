@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Challenge</title>
+    <style>
+        body {
+            font: 12pt Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        button {
+            font-size: 12pt;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Message Challenge</h1>
+    <button id="button1" aria-label="Button 1">Button 1</button>
+    <button id="button2" aria-label="Button 2">Button 2</button>
+    <button id="button3" aria-label="Button 3">Button 3</button>
+
+    <script>
+        function aviso(message) {
+            window.alert(message);
+        }
+
+        const button1 = document.querySelector('#button1');
+        const button2 = document.querySelector('#button2');
+        const button3 = document.querySelector('#button3');
+
+        /*
+            could also be written as:
+            
+        document.querySelector('#button1').addEventListener('click', function() {
+            aviso('Você clicou no botão 1')});
+        */
+
+        button1.addEventListener('click', () => {
+            aviso('Você clicou no botão 1');
+        });
+
+        button2.addEventListener('click', () => {
+            aviso('Você clicou no botão 2');
+        });
+
+        button3.addEventListener('click', () => {
+            aviso('Você clicou no botão 3');
+        });
+    </script>
+</body>
+</html>
