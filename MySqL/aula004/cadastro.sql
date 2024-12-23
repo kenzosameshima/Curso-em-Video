@@ -1,0 +1,16 @@
+CREATE DATABASE cadastro
+DEFAULT CHARACTER SET utf8mb4
+DEFAULT COLLATE utf8mb4_0900_ai_ci;
+
+USE cadastro;
+
+CREATE TABLE pessoas (
+id INT AUTO_INCREMENT,
+nome VARCHAR(30) NOT NULL,
+nascimento DATE,
+sexo ENUM('M', 'F'),
+peso DECIMAL(5,2),
+altura DECIMAL(3,2),
+pais VARCHAR(30) DEFAULT 'Brasil',
+PRIMARY KEY (id)
+) DEFAULT CHARSET = utf8mb4;
